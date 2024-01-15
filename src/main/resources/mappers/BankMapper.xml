@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射点:建立接口与mapper的映射关系-->
+<mapper namespace="com.dao.BankDao">
+    <select id="select_" parameterType="string" resultType="com.model.Account">
+        select * from account where code=#{code}
+    </select>
+
+    <insert id="insert_" parameterType="com.model.Account">
+        insert into account(name,code,home,money,BankMoney) values (#{name},#{code},#{home},#{money},#{BankMoney})
+    </insert>
+</mapper>
